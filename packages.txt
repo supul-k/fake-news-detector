@@ -1,2 +1,0 @@
-# packages.txt - system dependencies
-# This file is empty for now, but needed for some deployments
