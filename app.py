@@ -13,6 +13,7 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.model_selection import train_test_split
 import os
 import warnings
+import sys
 warnings.filterwarnings('ignore')
 
 # Page configuration
@@ -21,6 +22,22 @@ st.set_page_config(
     page_icon="📰",
     layout="wide"
 )
+
+# Ensure dataset exists before proceeding
+def ensure_dataset():
+    """Make sure dataset is available"""
+    if not os.path.exists('data/Fake.csv') or not os.path.exists('data/True.csv'):
+        try:
+            from download_data import download_dataset
+            success = download_dataset()
+            if not success:
+                st.error("⚠️ Could not download dataset. Using sample data for testing.")
+        except Exception as e:
+            st.warning(f"Dataset not available: {e}")
+            st.info("The app will still work with sample data.")
+
+# Run this before loading models
+ensure_dataset()
 
 # ============================================
 # DEFINE MODEL ARCHITECTURE
