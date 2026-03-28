@@ -1,0 +1,2 @@
+# Create runtime.txt to specify Python 3.10
+echo "python-3.10" > runtime.txt
