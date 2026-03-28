@@ -1,0 +1,26 @@
+============================================================
+FAKE NEWS DETECTION - TRAINING SUMMARY
+============================================================
+
+Training Date: 2026-03-28 12:35:57
+Total Articles: 44,898
+FAKE Articles: 23,481
+REAL Articles: 21,417
+
+Model Architecture:
+  - Input Features: 5,000
+  - Hidden Layer 1: 256 neurons
+  - Hidden Layer 2: 128 neurons
+  - Hidden Layer 3: 64 neurons
+  - Output: 1 neuron (Sigmoid)
+  - Total Parameters: 1,321,473
+
+Training Results:
+  - Training Accuracy: 0.9713 (97.13%)
+  - Test Accuracy: 0.9666 (96.66%)
+
+Confusion Matrix:
+                 Predicted
+                 REAL  FAKE
+Actual REAL      4152    132
+       FAKE       168   4528
