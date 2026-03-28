@@ -1,9 +1,8 @@
-# Create/update requirements.txt
-echo "torch==2.0.1
+torch==2.0.1
 torchvision==0.15.2
 pandas==2.0.3
 scikit-learn==1.3.0
 matplotlib==3.7.2
 streamlit==1.28.0
 numpy==1.24.3
-seaborn==0.12.2" > requirements.txt
+seaborn==0.12.2
