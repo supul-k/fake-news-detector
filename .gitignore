@@ -18,7 +18,6 @@ models/*.pth
 models/*.pkl
 
 # Data (too large)
-data/*.csv
 !data/.gitkeep
 
 # IDE
